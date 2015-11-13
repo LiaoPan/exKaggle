@@ -30,7 +30,7 @@ library(data.table)
 library(h2o)
 
 cat("reading the train and test data (with data.table) \n")
-train <- fread("../input/train.csv",stringsAsFactors = T)
+train <- fread("../input/train.csv",stringsAsFactors = T) #http://www.inside-r.org/packages/cran/data.table/docs/fread
 test  <- fread("../input/test.csv",stringsAsFactors = T)
 store <- fread("../input/store.csv",stringsAsFactors = T)
 train <- train[Sales > 0,]  ## We are not judged on 0 sales records in test set
